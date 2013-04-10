@@ -41,6 +41,14 @@ git push azure master
 azure site browse
 ```
 
+### Make an edit
+Go update one of the files like the index.jade file
+```bash
+git commit -am "another update"
+git push azure master
+azure site browse
+```
+
 
 
 
