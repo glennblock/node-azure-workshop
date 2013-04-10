@@ -7,10 +7,41 @@ Azure Websites have some really nice benefits for node development
 
 * Cheap - 10 free sites out of the box
 * Fast - Deploy really quickly using git, github, mercurial, dropbox or FTP!
+* Scalable - Easily scale up number of instances and underlying hardware
 * Great for node
 	* Fully supports hosting node apps
 	* Downloads npm packages on the fly
-	* Streaming of node ooutput logs
+	* Streaming of node output logs
+	* Debugging support
+
+	
+## Deploying your first app - Express
+
+### Create an express app
+```bash
+npm install express -g
+express
+```
+
+### Create a Website to deploy with git
+```bash
+azure site create [name] --git
+```
+This automatically provisions a new Website and creates a local git repo
+
+### Deploy your website
+```bash
+git add .
+git commit -am "first commit"
+git push azure master
+```
+
+### View the app
+```bash
+azure site browse
+```
+
+
 
 
 
