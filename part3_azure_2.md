@@ -70,17 +70,6 @@ azure site create *site* --github
 ```
 This will create a website that is linked to a github repo. Every time you push to github the site will be updated.
 
-## Managing deployments
-### List out your deployments
-```bash
-azure site deployment list
-```
-
-### Redeploy
-```bash
-azure site deployment redeploy *deployment_id*
-```
-
 ## Debugging
 
 ### Configuring
@@ -98,6 +87,17 @@ azure site browse
 ### Stream the output
 ```bash
 azure site log tail
+```
+
+## Managing deployments
+### List out your deployments
+```bash
+azure site deployment list
+```
+
+### Redeploy
+```bash
+azure site deployment redeploy *deployment_id*
 ```
 
 ## Configuring environment variables
