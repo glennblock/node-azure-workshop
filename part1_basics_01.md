@@ -95,20 +95,20 @@ DoSomething(DidSomething);
 * Or nest related functions as inner functions
 
 ```javascript
-function ExecuteDoSomething(callback) {
-  function DidSomething(err, result) {
-    DoAnotherThing(DidAnotherThing);
+function executeDoSomething(callback) {
+  function didSomething(err, result) {
+    doAnotherThing(didAnotherThing);
   }
 
-  function DidAnotherThing(err,result) {
-    DoEventAnotherThing(DidEvenAnotherThing)
+  function didAnotherThing(err,result) {
+    doEvenAnotherThing(didEvenAnotherThing)
   }
 
-  function DidEvenAnotherThing(err, result) {
+  function didEvenAnotherThing(err, result) {
     callback();
   }
 
-  DoSomething(DidSomething);
+  doSomething(didSomething);
 }
 
 ```
