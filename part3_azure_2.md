@@ -49,6 +49,20 @@ git push azure master
 azure site browse
 ```
 
+### List sites
+```bash
+azure site list
+```
+
+### Delete sites
+```bash
+azure site delete [site]
+```
+### Show sit details
+```bash
+azure site show [site]
+```
+
 
 
 
