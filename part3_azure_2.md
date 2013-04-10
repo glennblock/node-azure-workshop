@@ -58,7 +58,7 @@ azure site list
 ```bash
 azure site delete [site]
 ```
-### Show sit details
+### Show site details
 ```bash
 azure site show [site]
 ```
