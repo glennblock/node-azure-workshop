@@ -32,13 +32,23 @@ sudo npm install azure-cli -g
 azure
 ```
 
-## Downloading your credentails (publishsettings)
+## Downloading your credentials (publishsettings)
 
 ```bash
 azure account download
 ```
 
-This will take you to the Azure portal to login and download a publish settings file. 
+This will take you to the Azure portal to login and download a publish settings file.
+
+## Importing credentials
+
+```bash
+azure account import [publishsettings]
+```
+
+You should change to the directory where the publishsettings file was downloaded. Once you have imported you are now ready to go work with Azure.
+
+
 
 
 
