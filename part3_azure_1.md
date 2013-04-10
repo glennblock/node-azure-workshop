@@ -48,7 +48,16 @@ azure account import [publishsettings]
 
 You should change to the directory where the publishsettings file was downloaded. Once you have imported you are now ready to go work with Azure.
 
+## Test it out
 
+```bash
+azure site list
+
+azure vm list
+
+azure sb namespace list
+
+azure sql list
 
 
 
