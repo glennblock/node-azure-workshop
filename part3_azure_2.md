@@ -63,6 +63,21 @@ azure site delete [site]
 azure site show [site]
 ```
 
+## More fun with sites
+
+### Configuring environment variables
+You can use the CLI to set environment variables which instantly propagate to your app. Very useful for staging / production like settings which you don't want hard coded.
+
+Make a change in your index.jade to display a "foo" environment variable i.e.
+
+```jade
+#{process.env.foo}
+```
+
+```bash
+azure site config 
+Modify your app to display an env variable foo
+
 
 
 
