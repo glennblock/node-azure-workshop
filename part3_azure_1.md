@@ -55,3 +55,10 @@ azure site list
 azure vm list
 azure sb namespace list
 azure sql list
+```
+
+## Head to the Azure portal!
+
+```bash
+azure portal
+```
