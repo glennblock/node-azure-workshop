@@ -1,4 +1,4 @@
-# Windows Azure and node.js
+# Windows Azure and the Azure CLI
 ## Windows Azure
 Windows Azure is Microsoft's cloud platform. At high level it provides two things:
 
