@@ -25,7 +25,7 @@ express
 
 ### Create a Website to deploy with git
 ```bash
-azure site create [name] --git
+azure site create *site* --git
 ```
 This automatically provisions a new Website and creates a local git repo
 
@@ -63,9 +63,44 @@ azure site delete [site]
 azure site show [site]
 ```
 
-## More fun with sites
+## Github deployment (supports SSH)
+Create a site that is connecting to a github repo
+```bash
+azure site create *site* --github
+```
+This will create a website that is linked to a github repo. Every time you push to github the site will be updated.
 
-### Configuring environment variables
+## Managing deployments
+### List out your deployments
+```bash
+azure site deployment list
+```
+
+### Redeploy
+```bash
+azure site deployment redeploy *deployment_id*
+```
+
+## Debugging
+
+### Configuring
+* Edit your iisnode.yml and set "koggingEnabled" and "devErrorsEnabled" to true.
+* Make an error in your code like requiring a module that does not exist.
+
+### Commit and browse to see debugger errors
+
+```bash
+git commit -am "setting debug"
+git push azure master
+azure site browse
+```
+
+### Stream the output
+```bash
+azure site log tail
+```
+
+## Configuring environment variables
 You can use the CLI to set environment variables which instantly propagate to your app. Very useful for staging / production like settings which you don't want hard coded.
 
 Make a change in your index.jade to display a "foo" environment variable i.e.
@@ -74,13 +109,21 @@ Make a change in your index.jade to display a "foo" environment variable i.e.
 #{process.env.foo}
 ```
 
+### Commit
+
 ```bash
-azure site config 
-Modify your app to display an env variable foo
+git commit -am "adding env"
+git push azure master
+```
 
+### Set the environment var
 
+```bash
+azure site config add foo=bar
+```
 
+### View the site
 
-
-
-
+```bash
+azure site browse
+```
