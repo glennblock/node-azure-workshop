@@ -52,11 +52,8 @@ You should change to the directory where the publishsettings file was downloaded
 
 ```bash
 azure site list
-
 azure vm list
-
 azure sb namespace list
-
 azure sql list
 
 
