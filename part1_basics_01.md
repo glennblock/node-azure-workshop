@@ -82,7 +82,7 @@ function DidSomething(err, result) {
 }
 
 function DidAnotherThing(err,result) {
-  DoEventAnotherThing(DidEvenAnotherThing)
+  DoEvenAnotherThing(DidEvenAnotherThing)
 }
 
 function DidEvenAnotherThing(err, result) {
@@ -101,7 +101,7 @@ function ExecuteDoSomething(callback) {
   }
 
   function DidAnotherThing(err,result) {
-    DoEventAnotherThing(DidEvenAnotherThing)
+    DoEvenAnotherThing(DidEvenAnotherThing)
   }
 
   function DidEvenAnotherThing(err, result) {
