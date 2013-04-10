@@ -95,22 +95,45 @@ DoSomething(DidSomething);
 * Or nest related functions as inner functions
 
 ```javascript
-function executeDoSomething(callback) {
+function executeDoSomething(mainCallback) {
+  function doSomething(callback) {
+    callback(undefined);
+  }
+
   function didSomething(err, result) {
     doAnotherThing(didAnotherThing);
   }
 
+  function doAnotherThing(callback) {
+    callback(undefined);
+  }
+
   function didAnotherThing(err,result) {
-    doEvenAnotherThing(didEvenAnotherThing)
+    doEvenAnotherThing(didEvenAnotherThing);
+  }
+
+  function doEvenAnotherThing(callback) {
+    callback({error:'an error occured'});
   }
 
   function didEvenAnotherThing(err, result) {
-    callback();
+    if (err) {
+      mainCallback(err);
+      return;
+    }
+    mainCallback(undefined);
+
   }
 
   doSomething(didSomething);
 }
 
+function done(err, result) {
+  console.log('done');
+  console.log(err);
+}
+
+executeDoSomething(done);
 ```
 
 * This provides an adding scoping benefit for example the callback variable above.
