@@ -14,3 +14,31 @@ Capabilities provided by Windows Azure that you can use within your applications
 * Messaging (Queues and Service Bus)
 * Media Services, CDN, etc.
 * Add-ons, 3rd part services like MongoDB, Pusher
+
+# Azure CLI
+A cross platform command line tool for managing Windows Azure Compute and Services
+
+![cli image](https://photos-4.dropbox.com/t/0/AAAEjk4FcKQ8lG7M6RlqqTfsCIWVD3bUxEGWbtaBFl8csA/12/6860088/png/32x32/3/_/1/2/cli.png/MVbb579GQQMggCN0G0evxWcsZ1BVvZr0P3pRpvQGOLU?size=1024x768)
+
+## Installing
+The azure-cli is available as an npm package.
+
+```bash
+sudo npm install azure-cli -g
+```
+
+## Test it out
+```bash
+azure
+```
+
+## Downloading your credentails (publishsettings)
+
+```bash
+azure account download
+```
+
+This will take you to the Azure portal to login and download a publish settings file. 
+
+
+
